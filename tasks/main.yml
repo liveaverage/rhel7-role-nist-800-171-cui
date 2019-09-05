@@ -5753,7 +5753,7 @@
     - PCI-DSS-Req-8.3
 
 -   name: Configure NSS DB To Use opensc
-    shell: /usr/bin/pkcs11-switch opensc
+    shell: 'yes  | /usr/bin/pkcs11-switch opensc'
     when: pkcsw_output.stdout != "opensc" and True
     tags:
     - configure_opensc_nss_db
